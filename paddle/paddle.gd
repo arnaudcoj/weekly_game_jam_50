@@ -8,7 +8,8 @@ func _ready():
 	pass
 
 func _process(delta):
-	follow_ball()
+	if get_node(ball) != null :
+		follow_ball()
 	
 func follow_ball():
 	move_and_collide(Vector2(get_node(ball).position.x - position.x, 0))

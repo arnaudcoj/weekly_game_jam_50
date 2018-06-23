@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://level_container.gd" type="Script" id=2]
+
+[node name="Game" type="Node" index="0"]
+
+pause_mode = 2
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="LevelContainer" type="Node" parent="." index="0"]
+
+pause_mode = 1
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause" ]
+
+

@@ -16,8 +16,8 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
-final_scale = 0.5
-scale_speed = 0.4
+final_scale = 0.4
+scale_speed = 0.05
 
 [node name="CollisionPolygon2D" parent="." index="0" instance=ExtResource( 2 )]
 

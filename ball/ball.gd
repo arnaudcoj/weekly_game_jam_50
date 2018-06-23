@@ -17,4 +17,4 @@ func _on_Area2D_body_entered(body):
 		new_velocity.x = -new_velocity.x
 		new_velocity = new_velocity * min(linear_velocity.length(), max_speed)
 		linear_velocity = new_velocity
-		body.queue_free()
+		body.die()

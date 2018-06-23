@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 export var final_scale = 0.4
-export var scale_speed = 0.4
+export var scale_speed = 0.05
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
