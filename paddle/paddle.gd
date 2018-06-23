@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if get_node(ball) != null :
+	if has_node(ball):
 		follow_ball()
 	
 func follow_ball():
