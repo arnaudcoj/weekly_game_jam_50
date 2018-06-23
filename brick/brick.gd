@@ -39,3 +39,6 @@ func _on_Timer_timeout():
 		
 		$Timer.wait_time = rand_range(1.0, 5.0)
 		$Timer.start()
+		
+func is_brick():
+	return true
