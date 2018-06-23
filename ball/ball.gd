@@ -11,7 +11,6 @@ func _on_Area2D_body_entered(body):
 		new_velocity.y = -new_velocity.y
 		new_velocity = new_velocity * min(linear_velocity.length() * 1.05, max_speed)
 		linear_velocity = new_velocity
-		print(linear_velocity.length())
 	elif body.has_method("is_brick") and body.is_brick():
 		var new_velocity = linear_velocity.normalized()
 		new_velocity.y = -new_velocity.y

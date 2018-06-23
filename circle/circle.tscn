@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://circle/circle.gd" type="Script" id=1]
+[ext_resource path="res://circle/circle_collision.tscn" type="PackedScene" id=2]
+[ext_resource path="res://circle/circle.png" type="Texture" id=3]
+
+[node name="Circle" type="StaticBody2D" index="0"]
+
+modulate = Color( 0.568939, 0, 0.707031, 0.408824 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+final_scale = 0.5
+scale_speed = 0.4
+
+[node name="CollisionPolygon2D" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+polygon = PoolVector2Array( -87.7225, -327.246, -0.243881, -338.909, 88.128, -327.143, 169.49, -293.346, 239.336, -239.772, 293.161, -169.676, 327.208, -89.0644, 338.974, -0.442207, 327.458, 87.6793, 293.661, 169.292, 240.087, 238.888, 169.49, 293.213, 88.128, 327.26, -0.243885, 338.776, -87.364, 327.51, -168.977, 293.713, -239.574, 239.639, -292.897, 169.793, -326.944, 87.6793, -338.711, 0.0584869, -327.195, -87.5623, -293.398, -169.425, -239.574, -239.522, -168.977, -293.346, -87.7227, -327.254, -86.8834, -1000, -1000, -1000, -1000, 1000, 1000, 1000, 1000, -1000, -86.8997, -1001 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="circle" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.82, 0.82 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Polygon2D" type="Polygon2D" parent="circle" index="0"]
+
+polygon = PoolVector2Array( -512, -512, 512, -512, 512, 512, -512, 512, -512, -512, -32768, -512, -32768, 32768, 32768, 32768, 32768, -32768, -32768, -32768, -32768, -512 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+
