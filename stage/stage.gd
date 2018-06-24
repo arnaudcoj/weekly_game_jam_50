@@ -19,7 +19,7 @@ func game_over():
 	game_over = true
 	#temporarly remove the ball to indicate we won
 	$GameObjects/Ball.queue_free()
-	$CanvasLayer/GameOverScreen.set_winner("Player")
+	$CanvasLayer/GameOverScreen.set_winner($GameObjects/Bricks.get_winner().name)
 	$CanvasLayer/GameOverScreen.open()
 
 func _on_game_over_restart():

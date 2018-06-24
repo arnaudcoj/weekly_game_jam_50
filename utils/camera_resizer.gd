@@ -5,7 +5,6 @@ var max_zoom = 5
 onready var default_res = Vector2(ProjectSettings.get_setting("display/window/size/width"),ProjectSettings.get_setting("display/window/size/height"))
 
 func _ready():
-	print(default_res)
 	get_tree().get_root().connect("size_changed",self,"on_resize")
 	
 func on_resize():
