@@ -11,3 +11,6 @@ func on_brick_dead(dead_brick):
 
 func get_remaining_bricks_count():
 	return get_child_count()
+	
+func get_winner():
+	get_child(0)

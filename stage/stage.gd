@@ -7,6 +7,8 @@ var game_over = false
 func _input(event):
 	if event.is_action_pressed("ui_select"):
 		_on_pause()
+	elif game_over and event is InputEventKey:
+		_on_game_over_restart()
 
 func _on_Bricks_brick_dead(dead_brick):
 	#2 because the 2nd has not been freed yet
@@ -15,18 +17,17 @@ func _on_Bricks_brick_dead(dead_brick):
 
 func game_over():
 	game_over = true
-	$GameObjects/Ball.queue_free()
 	#temporarly remove the ball to indicate we won
-	$GameOverTimer.start()
+	$GameObjects/Ball.queue_free()
+	$CanvasLayer/GameOverScreen.set_winner("Player")
+	$CanvasLayer/GameOverScreen.open()
 
-func _on_GameOverTimer_timeout():
+func _on_game_over_restart():
 	game_over = false
+	$CanvasLayer/GameOverScreen.close()
 	emit_signal("restart")
 
-func _on_pause():
-	if game_over:
-		return
-		
+func _on_pause():		
 	get_tree().paused = !get_tree().paused
 	if get_tree().paused:
 		$CanvasLayer/PauseScreen.open()

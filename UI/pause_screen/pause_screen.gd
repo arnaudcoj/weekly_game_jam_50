@@ -9,3 +9,6 @@ func open():
 func close():
 	open = false
 	hide()
+	
+func set_winner(winner_name):
+	$Label.text = winner_name + " is the last brick standing!"
