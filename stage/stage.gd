@@ -2,23 +2,33 @@ extends Node2D
 
 signal restart
 
-func _ready():
-	pass
+var game_over = false
 	
 func _input(event):
 	if event.is_action_pressed("ui_select"):
-		get_tree().paused = !get_tree().paused
+		_on_pause()
 
 func _on_Bricks_brick_dead(dead_brick):
 	#2 because the 2nd has not been freed yet
 	if $GameObjects/Bricks.get_remaining_bricks_count() == 2:
-		$GameObjects/Ball.queue_free()
-		#temporarly remove the ball to indicate we won
-		$GameOverTimer.start()
+		game_over()
 
 func game_over():
-	emit_signal("restart")
-	
+	game_over = true
+	$GameObjects/Ball.queue_free()
+	#temporarly remove the ball to indicate we won
+	$GameOverTimer.start()
 
 func _on_GameOverTimer_timeout():
-	game_over()
+	game_over = false
+	emit_signal("restart")
+
+func _on_pause():
+	if game_over:
+		return
+		
+	get_tree().paused = !get_tree().paused
+	if get_tree().paused:
+		$CanvasLayer/PauseScreen.open()
+	else:
+		$CanvasLayer/PauseScreen.close()

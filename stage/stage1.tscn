@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://stage/stage.gd" type="Script" id=1]
 [ext_resource path="res://stage/bricks_container.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://paddle/paddle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ball/ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://circle/circle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/pause_screen/pause_screen.gd" type="Script" id=8]
+[ext_resource path="res://square.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -158,6 +160,66 @@ process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="PauseScreen" type="Control" parent="CanvasLayer" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="CanvasLayer/PauseScreen" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "PAUSE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PauseScreen" index="1"]
+
+modulate = Color( 0.0966405, 0.0885773, 0.167969, 0.204431 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Focus", "Visibility" ]
 
 [connection signal="brick_dead" from="GameObjects/Bricks" to="." method="_on_Bricks_brick_dead"]
 
