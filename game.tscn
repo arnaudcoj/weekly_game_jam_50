@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://level_container.gd" type="Script" id=2]
 [ext_resource path="res://UI/main_menu/main_menu.gd" type="Script" id=3]
+[ext_resource path="res://fonts/SF-Archery-Black/SF_Archery_Black.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/Enigmatic/enigmatic_25.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 75
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="Game" type="Node" index="0"]
 
@@ -25,7 +35,6 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="MainMenu" type="Control" parent="MenuCanvas" index="0"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -51,13 +60,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
 text = "Ball Royale"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Grow Direction", "Margin", "custom_fonts" ]
 
 [node name="Rules" type="Control" parent="MenuCanvas/MainMenu" index="1"]
 
@@ -87,6 +97,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
 text = "This is a Battle Royale Brick Breaker. You must be the last brick standing.
 Use the directionnal arrows to dash and push the other bricks onto the ball.
 
@@ -96,6 +107,7 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="PressButton" type="Label" parent="MenuCanvas/MainMenu" index="2"]
 
@@ -111,6 +123,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
 text = "Press a button to start"
 align = 1
 valign = 1
@@ -132,6 +145,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
 text = "If you are playing via a browser, click on the game window to pick the focus"
 align = 1
 valign = 1
