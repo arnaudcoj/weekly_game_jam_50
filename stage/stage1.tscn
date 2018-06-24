@@ -15,14 +15,21 @@ extents = Vector2( 792.013, 226.791 )
 
 [node name="Level" type="Node2D" index="0"]
 
+pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="Bricks" type="Node2D" parent="." index="0"]
+[node name="GameObjects" type="Node2D" parent="." index="0"]
 
+pause_mode = 1
+_sections_unfolded = [ "Pause" ]
+
+[node name="Bricks" type="Node2D" parent="GameObjects" index="0"]
+
+editor/display_folded = true
 script = ExtResource( 2 )
 
-[node name="Brick" parent="Bricks" index="0" instance=ExtResource( 3 )]
+[node name="Brick" parent="GameObjects/Bricks" index="0" instance=ExtResource( 3 )]
 
 modulate = Color( 1, 0, 0, 1 )
 self_modulate = Color( 1, 0, 0, 1 )
@@ -30,51 +37,51 @@ position = Vector2( 558.143, 81.6406 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pickable", "Visibility", "collision" ]
 human = true
 
-[node name="Brick2" parent="Bricks" index="1" instance=ExtResource( 3 )]
+[node name="Brick2" parent="GameObjects/Bricks" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 289.995, 81.6406 )
 
-[node name="Brick3" parent="Bricks" index="2" instance=ExtResource( 3 )]
+[node name="Brick3" parent="GameObjects/Bricks" index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 661.278, 192.708 )
 
-[node name="Brick4" parent="Bricks" index="3" instance=ExtResource( 3 )]
+[node name="Brick4" parent="GameObjects/Bricks" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 382.022, 189.535 )
 
-[node name="Brick5" parent="Bricks" index="4" instance=ExtResource( 3 )]
+[node name="Brick5" parent="GameObjects/Bricks" index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 382.022, 76.8805 )
 
-[node name="Brick6" parent="Bricks" index="5" instance=ExtResource( 3 )]
+[node name="Brick6" parent="GameObjects/Bricks" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( 466.116, 81.6406 )
 
-[node name="Brick7" parent="Bricks" index="6" instance=ExtResource( 3 )]
+[node name="Brick7" parent="GameObjects/Bricks" index="6" instance=ExtResource( 3 )]
 
 position = Vector2( 656.518, 137.174 )
 
-[node name="Brick8" parent="Bricks" index="7" instance=ExtResource( 3 )]
+[node name="Brick8" parent="GameObjects/Bricks" index="7" instance=ExtResource( 3 )]
 
 position = Vector2( 291.581, 135.588 )
 
-[node name="Brick9" parent="Bricks" index="8" instance=ExtResource( 3 )]
+[node name="Brick9" parent="GameObjects/Bricks" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( 467.703, 191.122 )
 
-[node name="Brick10" parent="Bricks" index="9" instance=ExtResource( 3 )]
+[node name="Brick10" parent="GameObjects/Bricks" index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 562.904, 187.948 )
 
-[node name="Brick11" parent="Bricks" index="10" instance=ExtResource( 3 )]
+[node name="Brick11" parent="GameObjects/Bricks" index="10" instance=ExtResource( 3 )]
 
 position = Vector2( 297.928, 192.708 )
 
-[node name="Brick12" parent="Bricks" index="11" instance=ExtResource( 3 )]
+[node name="Brick12" parent="GameObjects/Bricks" index="11" instance=ExtResource( 3 )]
 
 position = Vector2( 651.758, 83.2273 )
 
-[node name="Bounds" type="StaticBody2D" parent="." index="1"]
+[node name="Bounds" type="StaticBody2D" parent="GameObjects" index="1"]
 
 input_pickable = false
 collision_layer = 3
@@ -85,13 +92,13 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bounds" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameObjects/Bounds" index="0"]
 
 visible = false
 build_mode = 0
 polygon = PoolVector2Array( 0, 600, 0, 0, 1024, 0, 1024, 600, 2000, 600, 2000, -800, -1000, -800, -1000, 600 )
 
-[node name="BricksBounds" type="StaticBody2D" parent="." index="2"]
+[node name="BricksBounds" type="StaticBody2D" parent="GameObjects" index="2"]
 
 position = Vector2( 518.035, 643.227 )
 input_pickable = false
@@ -106,12 +113,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BricksBounds" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameObjects/BricksBounds" index="0"]
 
 visible = false
 shape = SubResource( 1 )
 
-[node name="Polygon2D" type="Polygon2D" parent="BricksBounds" index="1"]
+[node name="Polygon2D" type="Polygon2D" parent="GameObjects/BricksBounds" index="1"]
 
 position = Vector2( 0, -5.44904 )
 polygon = PoolVector2Array( -344.749, -221.514, 312.53, -220.082, 312.53, -207.194, -347.613, -208.626 )
@@ -127,32 +134,32 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="BallBounds" parent="." index="3" instance=ExtResource( 4 )]
+[node name="BallBounds" parent="GameObjects" index="3" instance=ExtResource( 4 )]
 
-[node name="Paddle" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Paddle" parent="GameObjects" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 512.13, 575.098 )
 ball = NodePath("../Ball")
 
-[node name="Ball" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Ball" parent="GameObjects" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 564.127, 544.504 )
 linear_velocity = Vector2( 500, -500 )
 
-[node name="Circle" parent="." index="6" instance=ExtResource( 7 )]
+[node name="Circle" parent="GameObjects" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 512, 300 )
 scale = Vector2( 1.5, 1.5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="GameOverTimer" type="Timer" parent="." index="7"]
+[node name="GameOverTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[connection signal="brick_dead" from="Bricks" to="." method="_on_Bricks_brick_dead"]
+[connection signal="brick_dead" from="GameObjects/Bricks" to="." method="_on_Bricks_brick_dead"]
 
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 

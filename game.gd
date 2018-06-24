@@ -1,11 +1,19 @@
 extends Node
 
 func _ready():
-	$LevelContainer.load_level()
+	$MenuCanvas/MainMenu.open()
 
-func _input(event):
-	if event.is_action_pressed("ui_select"):
-		get_tree().paused = !get_tree().paused
+func _on_start():
+	$MenuCanvas/MainMenu.close()
+	$LevelContainer.load_level()
+	
+func _on_back_to_menu():
+	$LevelContainer.stop()
+	$MenuCanvas/MainMenu.open()
 
 func _on_Level_restart():
 	$LevelContainer.load_level()
+
+
+func _on_MainMenu_start():
+	_on_start()

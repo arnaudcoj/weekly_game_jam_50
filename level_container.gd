@@ -8,11 +8,14 @@ func _ready():
 	pass
 
 func load_level():
-	for child in get_children():
-		child.queue_free()
+	stop()
 	
 	var new_stage = stage1.instance()
 	
 	new_stage.connect("restart", self, "load_level")
 	
 	add_child(new_stage)
+	
+func stop():
+	for child in get_children():
+		child.queue_free()

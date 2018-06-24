@@ -4,11 +4,15 @@ signal restart
 
 func _ready():
 	pass
+	
+func _input(event):
+	if event.is_action_pressed("ui_select"):
+		get_tree().paused = !get_tree().paused
 
 func _on_Bricks_brick_dead(dead_brick):
 	#2 because the 2nd has not been freed yet
-	if $Bricks.get_remaining_bricks_count() == 2:
-		$Ball.queue_free()
+	if $GameObjects/Bricks.get_remaining_bricks_count() == 2:
+		$GameObjects/Ball.queue_free()
 		#temporarly remove the ball to indicate we won
 		$GameOverTimer.start()
 
