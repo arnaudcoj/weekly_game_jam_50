@@ -22,7 +22,6 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-visible = false
 shape = SubResource( 1 )
 
 
