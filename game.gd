@@ -14,6 +14,5 @@ func _on_back_to_menu():
 func _on_Level_restart():
 	$LevelContainer.load_level()
 
-
 func _on_MainMenu_start():
 	_on_start()

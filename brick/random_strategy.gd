@@ -4,7 +4,7 @@ onready var brick = get_parent()
 
 func _ready():
 	$Timer.wait_time = rand_range(.2, 5.0)
-	pass
+	$Timer.start()
 
 func _on_Timer_timeout():
 	var dir_choice = randi() % 4
