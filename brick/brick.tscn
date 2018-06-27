@@ -6,8 +6,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 19.6541
-height = 37.7287
+radius = 13.9585
+height = 28.5372
 
 [node name="Brick" type="RigidBody2D" index="0"]
 
@@ -35,7 +35,12 @@ speed = 1000
 
 [node name="Skin" type="Node2D" parent="." index="0"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Sprite" parent="Skin" index="0" instance=ExtResource( 2 )]
+
+scale = Vector2( 0.95, 0.45 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." index="1"]
 
