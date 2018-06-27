@@ -141,7 +141,7 @@ ball = NodePath("../Ball")
 [node name="Ball" parent="GameObjects" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 0, 252 )
-linear_velocity = Vector2( 500, -500 )
+linear_velocity = Vector2( 200, -200 )
 
 [node name="Circle" parent="GameObjects" index="6" instance=ExtResource( 8 )]
 
