@@ -35,83 +35,83 @@ script = ExtResource( 2 )
 
 [node name="HumanBrick" parent="GameObjects/Bricks" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( -233.243, -206.117 )
+position = Vector2( -238, -198 )
 
 [node name="CPUBrick" parent="GameObjects/Bricks" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( -109.243, -205.117 )
+position = Vector2( -118, -198 )
 
 [node name="CPUBrick2" parent="GameObjects/Bricks" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 14.7569, -206.117 )
+position = Vector2( 2, -198 )
 
 [node name="CPUBrick3" parent="GameObjects/Bricks" index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 116.757, -208.117 )
+position = Vector2( 122, -198 )
 
 [node name="CPUBrick4" parent="GameObjects/Bricks" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 218.757, -209.117 )
+position = Vector2( 242, -198 )
 
 [node name="CPUBrick5" parent="GameObjects/Bricks" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( -234.243, -141.264 )
+position = Vector2( -238, -138 )
 
 [node name="CPUBrick10" parent="GameObjects/Bricks" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( -235.75, -77.956 )
+position = Vector2( -238, -78 )
 
 [node name="CPUBrick17" parent="GameObjects/Bricks" index="7" instance=ExtResource( 4 )]
 
-position = Vector2( -232.736, -28.2138 )
+position = Vector2( -238, -18 )
 
 [node name="CPUBrick6" parent="GameObjects/Bricks" index="8" instance=ExtResource( 4 )]
 
-position = Vector2( -108.243, -145.264 )
+position = Vector2( -118, -138 )
 
 [node name="CPUBrick11" parent="GameObjects/Bricks" index="9" instance=ExtResource( 4 )]
 
-position = Vector2( -109.75, -81.956 )
+position = Vector2( -118, -78 )
 
 [node name="CPUBrick18" parent="GameObjects/Bricks" index="10" instance=ExtResource( 4 )]
 
-position = Vector2( -106.736, -32.2138 )
+position = Vector2( -118, -18 )
 
 [node name="CPUBrick7" parent="GameObjects/Bricks" index="11" instance=ExtResource( 4 )]
 
-position = Vector2( 14.7569, -143.264 )
+position = Vector2( 2, -138 )
 
 [node name="CPUBrick12" parent="GameObjects/Bricks" index="12" instance=ExtResource( 4 )]
 
-position = Vector2( 13.2496, -79.956 )
+position = Vector2( 2, -78 )
 
 [node name="CPUBrick19" parent="GameObjects/Bricks" index="13" instance=ExtResource( 4 )]
 
-position = Vector2( 16.2642, -30.2138 )
+position = Vector2( 2, -18 )
 
 [node name="CPUBrick8" parent="GameObjects/Bricks" index="14" instance=ExtResource( 4 )]
 
-position = Vector2( 116.757, -143.264 )
+position = Vector2( 122, -138 )
 
 [node name="CPUBrick13" parent="GameObjects/Bricks" index="15" instance=ExtResource( 4 )]
 
-position = Vector2( 115.25, -79.956 )
+position = Vector2( 122, -78 )
 
 [node name="CPUBrick15" parent="GameObjects/Bricks" index="16" instance=ExtResource( 4 )]
 
-position = Vector2( 118.264, -30.2138 )
+position = Vector2( 122, -18 )
 
 [node name="CPUBrick9" parent="GameObjects/Bricks" index="17" instance=ExtResource( 4 )]
 
-position = Vector2( 219.757, -141.264 )
+position = Vector2( 242, -138 )
 
 [node name="CPUBrick14" parent="GameObjects/Bricks" index="18" instance=ExtResource( 4 )]
 
-position = Vector2( 218.25, -77.956 )
+position = Vector2( 242, -78 )
 
 [node name="CPUBrick16" parent="GameObjects/Bricks" index="19" instance=ExtResource( 4 )]
 
-position = Vector2( 221.264, -28.2138 )
+position = Vector2( 242, -18 )
 
 [node name="Bounds" type="StaticBody2D" parent="GameObjects" index="1"]
 
