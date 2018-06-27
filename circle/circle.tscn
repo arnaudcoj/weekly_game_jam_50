@@ -16,8 +16,7 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
-final_scale = 0.4
-scale_speed = 0.05
+scales = [ [ 5, 0.8, 0.05 ], [ 4, 0.6, 0.05 ], [ 3, 0.4, 0.04 ], [ 2, 0.3, 0.03 ] ]
 
 [node name="CollisionPolygon2D" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -26,5 +25,14 @@ polygon = PoolVector2Array( -87.7225, -327.246, -0.243881, -338.909, 88.128, -32
 _sections_unfolded = [ "Transform" ]
 
 [node name="CircleVisual" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 

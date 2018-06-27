@@ -147,6 +147,7 @@ linear_velocity = Vector2( 200, -200 )
 
 scale = Vector2( 1.5, 1.5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+scales = [ [ 5, 1.2, 0.05 ], [ 5, 0.8, 0.05 ], [ 4, 0.6, 0.04 ], [ 3, 0.4, 0.03 ], [ 2, 0.3, 0.02 ] ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
