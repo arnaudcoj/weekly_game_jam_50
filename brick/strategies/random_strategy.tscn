@@ -2,7 +2,7 @@
 
 [ext_resource path="res://brick/random_strategy.gd" type="Script" id=1]
 
-[node name="RandomStrategy" type="Node"]
+[node name="RandomStrategy" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
