@@ -6,7 +6,7 @@ export var speed = 1000
 
 var loading = false
 var load_time = 0.0
-var max_load_time = .5
+var max_load_time = .3
 var dash_direction = Vector2()
 
 func die():
@@ -19,6 +19,10 @@ func _process(delta):
 		$Skin.scale = Vector2(1,1) * (1.0 - ((load_time / max_load_time) * 0.2))
 		if load_time > max_load_time:
 			stop_dash_load()
+
+func _physics_process(delta):
+	if loading:
+		linear_velocity *= 0.95 * (1-delta)
 
 func start_dash_load(direction):
 	if not loading:
