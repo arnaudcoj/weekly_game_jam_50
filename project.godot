@@ -14,6 +14,10 @@ config/name="Ball Royale"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "TileSetCutter" )
+
 [rendering]
 
 environment/default_clear_color=Color( 0.0966797, 0.136963, 0.257813, 1 )

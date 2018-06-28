@@ -5,8 +5,11 @@
 
 [node name="HumanBrick" index="0" instance=ExtResource( 1 )]
 
-modulate = Color( 0, 1, 0.0625, 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Pickable", "Visibility", "collision" ]
+
+[node name="Sprite" parent="Skin" index="0"]
+
+region_rect = Rect2( 0, 0, 16, 8 )
 
 [node name="HumanStrategy" parent="." index="2" instance=ExtResource( 2 )]
 

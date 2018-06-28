@@ -1,0 +1,194 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/TileSetCutter/tilesetcutter.gd" type="Script" id=1]
+[ext_resource path="res://addons/TileSetCutter/icon.png" type="Texture" id=2]
+[ext_resource path="res://brick/sprites/Breakout-002-A.png" type="Texture" id=3]
+
+[node name="TileSetCutter" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+ForceUpdate = null
+PadZeroes = null
+GenerateAllPalettes = null
+TileSize = Vector2( 16, 8 )
+Separation = Vector2( 0, 0 )
+TextureToCut = ExtResource( 3 )
+
+[node name="0" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 8 )
+
+[node name="1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 8 )
+
+[node name="2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 32, 0 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 8 )
+
+[node name="3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 48, 0 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 8 )
+
+[node name="4" type="Sprite" parent="." index="4"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 8 )
+
+[node name="5" type="Sprite" parent="." index="5"]
+
+position = Vector2( 0, 8 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 8, 16, 8 )
+
+[node name="6" type="Sprite" parent="." index="6"]
+
+position = Vector2( 16, 8 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 16, 8, 16, 8 )
+
+[node name="7" type="Sprite" parent="." index="7"]
+
+position = Vector2( 32, 8 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 8, 16, 8 )
+
+[node name="8" type="Sprite" parent="." index="8"]
+
+position = Vector2( 48, 8 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, 8, 16, 8 )
+
+[node name="9" type="Sprite" parent="." index="9"]
+
+position = Vector2( 64, 8 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 64, 8, 16, 8 )
+
+[node name="34" type="Sprite" parent="." index="10"]
+
+position = Vector2( 0, 16 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 8 )
+
+[node name="35" type="Sprite" parent="." index="11"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 8 )
+
+[node name="37" type="Sprite" parent="." index="12"]
+
+position = Vector2( 32, 16 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 8 )
+
+[node name="38" type="Sprite" parent="." index="13"]
+
+position = Vector2( 48, 16 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, 16, 16, 8 )
+
+[node name="39" type="Sprite" parent="." index="14"]
+
+position = Vector2( 64, 16 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 64, 16, 16, 8 )
+
+[node name="40" type="Sprite" parent="." index="15"]
+
+position = Vector2( 0, 24 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 24, 16, 8 )
+
+[node name="41" type="Sprite" parent="." index="16"]
+
+position = Vector2( 16, 24 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 16, 24, 16, 8 )
+
+[node name="42" type="Sprite" parent="." index="17"]
+
+position = Vector2( 32, 24 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 24, 16, 8 )
+
+[node name="43" type="Sprite" parent="." index="18"]
+
+position = Vector2( 48, 24 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, 24, 16, 8 )
+
+[node name="44" type="Sprite" parent="." index="19"]
+
+position = Vector2( 64, 24 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 64, 24, 16, 8 )
+
+[node name="45" type="Sprite" parent="." index="20"]
+
+position = Vector2( 0, 32 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 8 )
+
+[node name="46" type="Sprite" parent="." index="21"]
+
+position = Vector2( 16, 32 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 8 )
+
+[node name="47" type="Sprite" parent="." index="22"]
+
+position = Vector2( 32, 32 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 8 )
+
+[node name="48" type="Sprite" parent="." index="23"]
+
+position = Vector2( 48, 32 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, 32, 16, 8 )
+
+[node name="49" type="Sprite" parent="." index="24"]
+
+position = Vector2( 64, 32 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 64, 32, 16, 8 )
+
+

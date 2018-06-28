@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://brick/brick.gd" type="Script" id=1]
 [ext_resource path="res://brick/brick_visual.tscn" type="PackedScene" id=2]
+[ext_resource path="res://brick/sprites/Breakout-002-A.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 13.9585
-height = 28.5372
+radius = 11.7619
+height = 23.9148
 
 [node name="Brick" type="RigidBody2D" index="0"]
 
@@ -39,8 +40,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" parent="Skin" index="0" instance=ExtResource( 2 )]
 
-scale = Vector2( 0.95, 0.45 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 8 )
+_sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." index="1"]
 

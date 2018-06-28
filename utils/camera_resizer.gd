@@ -1,6 +1,6 @@
 extends Camera2D
 
-var max_zoom = 5
+var max_zoom = 3.5
 
 onready var default_res = Vector2(ProjectSettings.get_setting("display/window/size/width"),ProjectSettings.get_setting("display/window/size/height"))
 

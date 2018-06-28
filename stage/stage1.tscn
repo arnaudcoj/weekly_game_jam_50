@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://stage/stage.gd" type="Script" id=1]
-[ext_resource path="res://stage/bricks_container.gd" type="Script" id=2]
-[ext_resource path="res://brick/human_brick.tscn" type="PackedScene" id=3]
-[ext_resource path="res://brick/cpu_brick.tscn" type="PackedScene" id=4]
-[ext_resource path="res://stage/ball_bounds.tscn" type="PackedScene" id=5]
-[ext_resource path="res://paddle/paddle.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ball/ball.tscn" type="PackedScene" id=7]
-[ext_resource path="res://circle/circle.tscn" type="PackedScene" id=8]
-[ext_resource path="res://UI/pause_screen/pause_screen.gd" type="Script" id=9]
-[ext_resource path="res://fonts/Enigmatic/enigmatic_25.tres" type="DynamicFont" id=10]
-[ext_resource path="res://square.png" type="Texture" id=11]
-[ext_resource path="res://utils/camera_resizer.gd" type="Script" id=12]
+[ext_resource path="res://stage/color_sky.png" type="Texture" id=2]
+[ext_resource path="res://stage/bricks_container.gd" type="Script" id=3]
+[ext_resource path="res://brick/human_brick.tscn" type="PackedScene" id=4]
+[ext_resource path="res://brick/cpu_brick.tscn" type="PackedScene" id=5]
+[ext_resource path="res://stage/ball_bounds.tscn" type="PackedScene" id=6]
+[ext_resource path="res://paddle/paddle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ball/ball.tscn" type="PackedScene" id=8]
+[ext_resource path="res://circle/circle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/pause_screen/pause_screen.gd" type="Script" id=10]
+[ext_resource path="res://fonts/Enigmatic/enigmatic_25.tres" type="DynamicFont" id=11]
+[ext_resource path="res://square.png" type="Texture" id=12]
+[ext_resource path="res://utils/camera_resizer.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -24,98 +25,103 @@ pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Transform" ]
 
-[node name="GameObjects" type="Node2D" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 8.10623e-006, -3.83337 )
+scale = Vector2( 8.66667, 8.66667 )
+texture = ExtResource( 2 )
+
+[node name="GameObjects" type="Node2D" parent="." index="1"]
 
 pause_mode = 1
 _sections_unfolded = [ "Pause", "Transform" ]
 
 [node name="Bricks" type="Node2D" parent="GameObjects" index="0"]
 
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="HumanBrick" parent="GameObjects/Bricks" index="0" instance=ExtResource( 3 )]
+[node name="HumanBrick" parent="GameObjects/Bricks" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( -238, -198 )
 
-[node name="CPUBrick" parent="GameObjects/Bricks" index="1" instance=ExtResource( 4 )]
+[node name="CPUBrick" parent="GameObjects/Bricks" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( -118, -198 )
 
-[node name="CPUBrick2" parent="GameObjects/Bricks" index="2" instance=ExtResource( 4 )]
+[node name="CPUBrick2" parent="GameObjects/Bricks" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 2, -198 )
 
-[node name="CPUBrick3" parent="GameObjects/Bricks" index="3" instance=ExtResource( 4 )]
+[node name="CPUBrick3" parent="GameObjects/Bricks" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 122, -198 )
 
-[node name="CPUBrick4" parent="GameObjects/Bricks" index="4" instance=ExtResource( 4 )]
+[node name="CPUBrick4" parent="GameObjects/Bricks" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 242, -198 )
 
-[node name="CPUBrick5" parent="GameObjects/Bricks" index="5" instance=ExtResource( 4 )]
+[node name="CPUBrick5" parent="GameObjects/Bricks" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( -238, -138 )
 
-[node name="CPUBrick10" parent="GameObjects/Bricks" index="6" instance=ExtResource( 4 )]
+[node name="CPUBrick10" parent="GameObjects/Bricks" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( -238, -78 )
 
-[node name="CPUBrick17" parent="GameObjects/Bricks" index="7" instance=ExtResource( 4 )]
+[node name="CPUBrick17" parent="GameObjects/Bricks" index="7" instance=ExtResource( 5 )]
 
 position = Vector2( -238, -18 )
 
-[node name="CPUBrick6" parent="GameObjects/Bricks" index="8" instance=ExtResource( 4 )]
+[node name="CPUBrick6" parent="GameObjects/Bricks" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( -118, -138 )
 
-[node name="CPUBrick11" parent="GameObjects/Bricks" index="9" instance=ExtResource( 4 )]
+[node name="CPUBrick11" parent="GameObjects/Bricks" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( -118, -78 )
 
-[node name="CPUBrick18" parent="GameObjects/Bricks" index="10" instance=ExtResource( 4 )]
+[node name="CPUBrick18" parent="GameObjects/Bricks" index="10" instance=ExtResource( 5 )]
 
 position = Vector2( -118, -18 )
 
-[node name="CPUBrick7" parent="GameObjects/Bricks" index="11" instance=ExtResource( 4 )]
+[node name="CPUBrick7" parent="GameObjects/Bricks" index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 2, -138 )
 
-[node name="CPUBrick12" parent="GameObjects/Bricks" index="12" instance=ExtResource( 4 )]
+[node name="CPUBrick12" parent="GameObjects/Bricks" index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 2, -78 )
 
-[node name="CPUBrick19" parent="GameObjects/Bricks" index="13" instance=ExtResource( 4 )]
+[node name="CPUBrick19" parent="GameObjects/Bricks" index="13" instance=ExtResource( 5 )]
 
 position = Vector2( 2, -18 )
 
-[node name="CPUBrick8" parent="GameObjects/Bricks" index="14" instance=ExtResource( 4 )]
+[node name="CPUBrick8" parent="GameObjects/Bricks" index="14" instance=ExtResource( 5 )]
 
 position = Vector2( 122, -138 )
 
-[node name="CPUBrick13" parent="GameObjects/Bricks" index="15" instance=ExtResource( 4 )]
+[node name="CPUBrick13" parent="GameObjects/Bricks" index="15" instance=ExtResource( 5 )]
 
 position = Vector2( 122, -78 )
 
-[node name="CPUBrick15" parent="GameObjects/Bricks" index="16" instance=ExtResource( 4 )]
+[node name="CPUBrick15" parent="GameObjects/Bricks" index="16" instance=ExtResource( 5 )]
 
 position = Vector2( 122, -18 )
 
-[node name="CPUBrick9" parent="GameObjects/Bricks" index="17" instance=ExtResource( 4 )]
+[node name="CPUBrick9" parent="GameObjects/Bricks" index="17" instance=ExtResource( 5 )]
 
 position = Vector2( 242, -138 )
 
-[node name="CPUBrick14" parent="GameObjects/Bricks" index="18" instance=ExtResource( 4 )]
+[node name="CPUBrick14" parent="GameObjects/Bricks" index="18" instance=ExtResource( 5 )]
 
 position = Vector2( 242, -78 )
 
-[node name="CPUBrick16" parent="GameObjects/Bricks" index="19" instance=ExtResource( 4 )]
+[node name="CPUBrick16" parent="GameObjects/Bricks" index="19" instance=ExtResource( 5 )]
 
 position = Vector2( 242, -18 )
 
 [node name="Bounds" type="StaticBody2D" parent="GameObjects" index="1"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 3
 collision_mask = 3
@@ -135,7 +141,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="BricksBounds" type="StaticBody2D" parent="GameObjects" index="2"]
 
-editor/display_folded = true
 position = Vector2( 0, 418 )
 input_pickable = false
 collision_layer = 1
@@ -156,7 +161,7 @@ shape = SubResource( 1 )
 [node name="Polygon2D" type="Polygon2D" parent="GameObjects/BricksBounds" index="1"]
 
 position = Vector2( 0, -5.44904 )
-polygon = PoolVector2Array( -344.749, -221.514, 312.53, -220.082, 312.53, -207.194, -347.613, -208.626 )
+polygon = PoolVector2Array( -350, -220, 350, -220, 350, -210, -350, -210 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 0.303882 )
 vertex_colors = PoolColorArray(  )
@@ -169,27 +174,27 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="BallBounds" parent="GameObjects" index="3" instance=ExtResource( 5 )]
+[node name="BallBounds" parent="GameObjects" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 0, 502 )
 
-[node name="Paddle" parent="GameObjects" index="4" instance=ExtResource( 6 )]
+[node name="Paddle" parent="GameObjects" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 0, 291 )
 ball = NodePath("../Ball")
 
-[node name="Ball" parent="GameObjects" index="5" instance=ExtResource( 7 )]
+[node name="Ball" parent="GameObjects" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 0, 252 )
 linear_velocity = Vector2( 200, -200 )
 
-[node name="Circle" parent="GameObjects" index="6" instance=ExtResource( 8 )]
+[node name="Circle" parent="GameObjects" index="6" instance=ExtResource( 9 )]
 
 scale = Vector2( 1.5, 1.5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 scales = [ [ 5, 1.2, 0.05 ], [ 5, 0.8, 0.05 ], [ 4, 0.5, 0.04 ], [ 2, 0.3, 0.02 ] ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -210,7 +215,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="CanvasLayer/PauseScreen" index="0"]
 
@@ -225,7 +230,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 11 )
 text = "PAUSE"
 align = 1
 valign = 1
@@ -247,7 +252,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Focus", "Visibility" ]
@@ -265,7 +270,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="CanvasLayer/GameOverScreen" index="0"]
 
@@ -280,7 +285,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 11 )
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -301,7 +306,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Focus", "Visibility" ]
@@ -319,7 +324,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 11 )
 text = "Press any button to start a new game."
 align = 1
 valign = 1
@@ -328,7 +333,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="2"]
+[node name="Camera2D" type="Camera2D" parent="." index="3"]
 
 anchor_mode = 1
 rotating = false
@@ -352,7 +357,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Transform", "Z Index" ]
 
 [connection signal="brick_dead" from="GameObjects/Bricks" to="." method="_on_Bricks_brick_dead"]
